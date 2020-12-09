@@ -101,6 +101,12 @@ df_drb = df_drb.drop('variable', axis=1)
 df_drb = df_drb.rename(columns={'value': 'Defensive Rebounding Percentage'})
 df_drb = df_drb.set_index('Team')
 
+# the header of the dashboard
+st.write('NBA Team Statistics Graphed in Ascending Order of Wins', fontsize=20)
+st.write('The original data comes from NBA reference, with the link here: https://www.basketball-reference.com/leagues/NBA_2020.html', fontsize=10)
+st.write('To view the python script and written report in Deepnote, use the link here: https://deepnote.com/publish/25c09a60-88c7-4b10-a6d8-d4f0e19605ae', fontsize=10)
+st.write('To view the Github repository, use the link here: https://github.com/nkomarovsky/MA346_Final_Project_NBA_Data.git')
+
 
 # giving the user a choice of which plot to look at
 choice = st.selectbox("Which graph of team stats would you like to see?", \
@@ -120,6 +126,7 @@ if choice == 'Points Per Game':
     plt.xlabel('Team (* Indicates a Playoff Team)', fontsize=10)
     st.pyplot(plt.gcf())
     st.write(df_pts)
+    
 
 if choice == 'Effective Field Goal Percentage':
     df_efg.plot()
@@ -171,7 +178,7 @@ if choice == 'Offensive Rebounding Percentage':
     st.pyplot(plt.gcf())
     st.write(df_orb)
 
-if choice == 'Offensive Rebounding Percentage':
+if choice == 'Defensive Rebounding Percentage':
     df_drb.plot()
     plt.gcf().set_size_inches(10,10)
     plt.title('Defensive Rebounding Percentage of Every Team in the NBA, in Ascending Order of Wins', fontsize=14)
