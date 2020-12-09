@@ -102,10 +102,7 @@ df_drb = df_drb.rename(columns={'value': 'Defensive Rebounding Percentage'})
 df_drb = df_drb.set_index('Team')
 
 # the header of the dashboard
-st.write('NBA Team Statistics Graphed in Ascending Order of Wins', fontsize=20)
-st.write('The original data comes from NBA reference, with the link here: https://www.basketball-reference.com/leagues/NBA_2020.html', fontsize=10)
-st.write('To view the python script and written report in Deepnote, use the link here: https://deepnote.com/publish/25c09a60-88c7-4b10-a6d8-d4f0e19605ae', fontsize=10)
-st.write('To view the Github repository, use the link here: https://github.com/nkomarovsky/MA346_Final_Project_NBA_Data.git')
+st.write('NBA Team Statistics Graphed in Ascending Order of Wins', fontsize=50)
 
 
 # giving the user a choice of which plot to look at
@@ -189,7 +186,10 @@ if choice == 'Defensive Rebounding Percentage':
     st.write(df_drb)
 
 
-
+# links
+st.write('The original data comes from NBA reference, with the link here: https://www.basketball-reference.com/leagues/NBA_2020.html')
+st.write('To view the python script and written report in Deepnote, use the link here: https://deepnote.com/publish/25c09a60-88c7-4b10-a6d8-d4f0e19605ae')
+st.write('To view the Github repository, use the link here: https://github.com/nkomarovsky/MA346_Final_Project_NBA_Data.git')
 
 
 
